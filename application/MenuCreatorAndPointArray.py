@@ -1,8 +1,10 @@
 import cv2
 import numpy as np 
+import pydialog
 colordarkgray=(80,65,69)
+sysWidth,sysHeight=pydialog.getSysDimensions()
 
-def menuCreator(tabs=2,text=(('abc'),('abc')),color=((255,255,255),(255,255,255)),menuHeight=635,menuWidth=410,flag=True,oneRow=False):
+def menuCreator(tabs=2,text=(('abc'),('abc')),color=((255,255,255),(255,255,255)),menuHeight=int(0.734954*sysHeight),menuWidth=int(0.26693*sysWidth),flag=True,oneRow=False):
 
 	pointArray=[]
 	menu=np.zeros((menuHeight,menuWidth,3),np.uint8)
