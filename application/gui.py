@@ -6,11 +6,14 @@ import imgfunctions as imf
 # from win32api import GetSystemMetrics
 
 # cv2.namedWindow('edition',cv2.WINDOW_NORMAL)
+cv2.namedWindow('',cv2.WINDOW_NORMAL)
+cv2.setWindowProperty('', cv2.WND_PROP_FULLSCREEN, 1)
 
 imgOpened=False
 
 #edition global variables
-sysWidth,sysHeight=pydialog.getSysDimensions()
+sysWidth, sysHeight= 1536,864
+# sysWidth,sysHeight=pydialog.getSysDimensions()
 sysHeight=int(0.92*sysHeight)
 height=0
 width=0
